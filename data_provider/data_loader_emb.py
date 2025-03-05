@@ -163,7 +163,7 @@ class Dataset_ETT_minute(Dataset):
         self.data_path_file = data_path_file
 
         self.model_name = model_name
-        self.embed_path = f"/mnt/sfs-common/TimeCMA/Embeddings/{data_path_file}/{flag}/"
+        self.embed_path = f"Embeddings/{data_path_file}/{flag}/"
 
         self.__read_data__()
 
@@ -242,7 +242,7 @@ class Dataset_ETT_minute(Dataset):
         return self.scaler.inverse_transform(data)
 
 class Dataset_Custom(Dataset):
-    def __init__(self, root_path="/mnt/sfs-common/dataset/", flag='train', size=None,
+    def __init__(self, root_path="/content/all_datasets/weather", flag='train', size=None,
                  features='M', data_path='ECL',
                  target='OT', scale=True, timeenc=0, freq='h',
                  patch_len=16,percent=100,model_name="gpt2"):
@@ -279,7 +279,7 @@ class Dataset_Custom(Dataset):
         self.data_path_file = data_path_file
 
         self.model_name = model_name
-        self.embed_path = f"/mnt/sfs-common/TimeCMA/Embeddings/{data_path_file}/{flag}/"
+        self.embed_path = f"Embeddings/{data_path_file}/{flag}/"
 
         self.__read_data__()
 
