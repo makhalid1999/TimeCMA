@@ -204,7 +204,7 @@ class Dataset_ETT_minute(Dataset):
         return self.scaler.inverse_transform(data)
 
 class Dataset_Custom(Dataset):
-    def __init__(self, root_path="/mnt/sfs-common/dataset/", flag='train', size=None,
+    def __init__(self, root_path="/content/all_datasets/weather", flag='train', size=None,
                  features='M', data_path='ECL',
                  target='OT', scale=False, timeenc=0, freq='h',patch_len=16,percent=100):
         # size [seq_len, label_len, pred_len]
